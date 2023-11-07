@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./css/kttt.css" />
+  <title>ktchka</title>
+</head>
+
+<body>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  --bg_color: #f8f8f8;
+  --text_color: white;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  text-align: center;
+  font-family: 'Rubik', sans-serif;
+  padding: 10px;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  min-height: 100vh;
+}
+
+.title {
+  margin: 15px;
+}
+
+
+.adaptive {
+  width: 1200px;
+  height: 100%;
+  padding: 10px;
+  margin: auto;
+  color: var(--text_color);
+  background: var(--bg_color);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-content: start;
+  gap: 10px;
+}
+
+.block {
+  width: 100%;
+  height: 20vw;
+  display: flex;
+  border-radius: 10px;
+  border: 1px solid white;
+  background: black var(--img) center / cover;
+}
+
+.block strong {
+  margin: auto;
+  font-size: 20px;
+  color: #fffa;
+  mix-blend-mode: hard-light;
+  text-shadow: 1px 2px 4px black;
+}
+
+@media (max-width: 1200px) {
+  .adaptive {
+    width: 1000px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .adaptive {
+    width: 768px;
+  }
+}
+
+@media (max-width: 768px) {
+  .adaptive {
+    width: 480px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .block {
+    height: 25vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .adaptive {
+    width: 96vw;
+    grid-template-columns: 1fr;
+  }
+
+  .block {
+    height: 50vw;
+  }
+}
+  </style>
+  <h1 class="title">We'll help manage your business</h1>
+  <div class="adaptive">
+    <div class="block" style="
+          --img: url(https://www.vision-advertising.com/wp-content/uploads/2019/02/Consultation.jpg);
+        ">
+      <strong>CONSULTATIONS</strong>
+    </div>
+    <div class="block" style="
+         background-color: orange;">
+      <strong >STRATEGY</strong>
+    </div>
+    <div class="block" style="
+          --img: url(https://images01.nicepage.com/c461c07a441a5d220e8feb1a/5deb6bca9f605f76b70b68e7/wewe.jpg);
+        ">
+      <strong>INVESTMENT</strong>
+    </div>
+    <div class="block" style="
+         background-color:greenyellow;
+        ">
+      <strong>MARKETING</strong>
+    </div>
+    <div class="block" style="
+          --img: url(https://images03.nicepage.com/c461c07a441a5d220e8feb1a/20c62cd1e1d15e75ba2b5484/bf5831c7-be61-2575-6483-f38c1ca09a87.jpg?);
+        ">
+      <strong>STARTUPS</strong>
+    </div>
+    <div class="block" style="
+          background-color: aqua;
+        ">
+      <strong>ANTI-CRISIS</strong>
+    </div>
+  </div>
+</body>
+
+</html>
